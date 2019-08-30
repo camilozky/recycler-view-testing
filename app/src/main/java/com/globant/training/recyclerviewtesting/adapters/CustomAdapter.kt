@@ -6,9 +6,10 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.globant.training.recyclerviewtesting.R
 import com.globant.training.recyclerviewtesting.model.Item
-import kotlinx.android.synthetic.main.list_item.view.*
+import kotlinx.android.synthetic.main.list_item.view.img
+import kotlinx.android.synthetic.main.list_item.view.title
+import kotlinx.android.synthetic.main.list_item.view.subTitle
 import kotlin.collections.ArrayList
-
 
 
 /**

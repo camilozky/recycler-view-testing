@@ -6,9 +6,8 @@ import android.os.Bundle
 import android.util.Log
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.globant.training.recyclerviewtesting.adapters.CustomAdapter
-import com.globant.training.recyclerviewtesting.adapters.AdapterEvents
 import com.globant.training.recyclerviewtesting.model.Item
-import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.activity_main.recyclerView
 
 class MainActivity : AppCompatActivity(), CustomAdapter.AdapterEvents {
     @SuppressLint("WrongViewCast")
@@ -17,11 +16,11 @@ class MainActivity : AppCompatActivity(), CustomAdapter.AdapterEvents {
         setContentView(R.layout.activity_main)
         recyclerView.layoutManager = StaggeredGridLayoutManager(3, StaggeredGridLayoutManager.VERTICAL)
         val items = ArrayList<Item>()
-        items.add(Item(1,"Monda","vaya a comer monda Perro hp1","about_me_icon"))
-        items.add(Item(2,"Monda1","vaya a comer monda Perro hp2","dice_roller_icon"))
-        items.add(Item(3,"Monda2","vaya a comer monda Perro hp3","about_me_icon"))
-        items.add(Item(4,"Monda3","vaya a comer monda Perro hp4","dice_roller_icon"))
-        items.add(Item(5,"Monda4","vaya a comer monda Perro hp5","about_me_icon"))
+        items.add(Item(1,"RecyclerViewTesting1","subTitle RecyclerViewTesting","about_me_icon"))
+        items.add(Item(2,"RecyclerViewTesting2","subTitle RecyclerViewTesting","dice_roller_icon"))
+        items.add(Item(3,"RecyclerViewTesting3","subTitle RecyclerViewTesting","about_me_icon"))
+        items.add(Item(4,"RecyclerViewTesting4","subTitle RecyclerViewTesting","dice_roller_icon"))
+        items.add(Item(5,"RecyclerViewTesting5","subTitle RecyclerViewTesting","about_me_icon"))
         val adapter = CustomAdapter(items, this)
         recyclerView.adapter = adapter
     }
@@ -29,7 +28,4 @@ class MainActivity : AppCompatActivity(), CustomAdapter.AdapterEvents {
     override fun onItemClicked(item: Item) {
         Log.d("#040","elemento  $(item.id)"+item.id)
     }
-
-
-
 }
